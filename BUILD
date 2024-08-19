@@ -19,5 +19,8 @@ cmake(
     out_shared_libs = [
         "libzip.so.5",
     ],
+    deps = [ 
+        "@zlib",
+    ],
     visibility = ["//visibility:public"],
 )
