@@ -37,7 +37,7 @@
 #include <limits.h>
 #include <lzma.h>
 #include <stdlib.h>
-#include <zlib.h>
+#include "zlib.h"
 
 enum header_state { INCOMPLETE, OUTPUT, DONE };
 

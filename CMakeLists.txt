@@ -191,7 +191,7 @@ int main(int argc, char *argv[]) { }" HAVE_NULLABLE)
 
 test_big_endian(WORDS_BIGENDIAN)
 
-find_package(ZLIB 1.1.2 REQUIRED)
+find_package(ZLIB 1.1.2) # This is actually REQUIRED, but needs to be marked as optional to be built by bazel
 # so developers on systems where zlib is named differently (Windows, sometimes)
 # can override the name used in the pkg-config file
 if (NOT ZLIB_LINK_LIBRARY_NAME)
