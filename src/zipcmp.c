@@ -45,7 +45,7 @@
 #ifdef HAVE_FTS_H
 #include <fts.h>
 #endif
-#include <zlib.h>
+#include "zlib.h"
 
 #ifndef HAVE_GETOPT
 #include "getopt.h"
