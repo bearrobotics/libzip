@@ -11,13 +11,15 @@ cmake(
     build_args = [
         "-j16",
     ],
-    env = {
-        "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_BUILD_PARALLEL_LEVEL": "16",
+    cache_entries = {
+        "BUILD_SHARED_LIBS": "OFF",
+        "CMAKE_DISABLE_FIND_PACKAGE_ZLIB": "ON",
+        "ZLIB_INCLUDE_DIRS": "$EXT_BUILD_DEPS/include",
+        "ZLIB_LIBRARIES": "libzlib_source.a",
     },
     lib_source = ":all",
-    out_shared_libs = [
-        "libzip.so.5",
+    out_static_libs = [
+        "libzip.a",
     ],
     visibility = ["//visibility:public"],
     deps = [

@@ -37,7 +37,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <time.h>
-#include <zlib.h>
+#include "zlib.h"
 
 #include "zip.h"
 #include "zipint.h"
